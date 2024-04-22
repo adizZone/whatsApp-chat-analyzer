@@ -79,7 +79,7 @@ def most_common_words(selected_user,df):
     most_common_df = pd.DataFrame(Counter(words).most_common(20))
     return most_common_df
 
-def emoji_helper(selected_user,df):
+def emoji_helper(selected_user, df):
     if selected_user != 'Overall':
         df = df[df['user'] == selected_user]
 
@@ -137,18 +137,4 @@ def activity_heatmap(selected_user,df):
     user_heatmap = df.pivot_table(index='day_name', columns='period', values='message', aggfunc='count').fillna(0)
 
     return user_heatmap
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
