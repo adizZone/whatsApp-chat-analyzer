@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 st.sidebar.title("Whatsapp Chat Analyzer")
-st.title("Analysis Below")
+st.markdown('<h3 style="color: red;">Your Title Here</h3>', unsafe_allow_html=True)
 
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
